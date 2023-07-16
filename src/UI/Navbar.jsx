@@ -35,8 +35,9 @@ export const Navbar = () => {
       <AppBar
         position="static"
         color="transparent"
-        sx={{ justifyContent: "center" }}
-      >
+        sx={{ justifyContent: "center",
+      }}
+        >
         <Toolbar component="nav">
           <Typography
             variant="h5"
