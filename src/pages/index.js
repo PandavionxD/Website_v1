@@ -1,0 +1,5 @@
+export * from './AboutPage'
+export * from './ContactPage'
+export * from './HabilidadesPage'
+export * from './InicioPage'
+export * from './LinuxPage'

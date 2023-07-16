@@ -1,7 +1,17 @@
-import React from 'react'
+import { AppBar, Box, Toolbar, Typography } from "@mui/material";
+import React from "react";
 
 export const Navbar = () => {
   return (
-    <div>N</div>
-  )
-}
+    <AppBar position="static">
+      <Toolbar component='nav'  >
+      <Typography variant="h5" sx={{fontStyle:'italic'}}>
+        Alex Daniel
+      </Typography>
+      <Box>
+
+      </Box>
+      </Toolbar>
+    </AppBar>
+  );
+};
