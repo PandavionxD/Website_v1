@@ -1,7 +1,8 @@
-import { AppBar, Box, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, IconButton, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import  './nav.css'
+import MenuIcon from '@mui/icons-material/Menu';
 
 export const Navbar = () => {
   return (
@@ -10,7 +11,19 @@ export const Navbar = () => {
         <Typography variant="h5" color='primary.main' sx={{ fontStyle: "italic", flexGrow: 1, fontWeight:700 }}>
           Alex Daniel
         </Typography>
-        <Box>
+
+        <IconButton color="primary"sx={{
+          display:{
+            sm:'none'
+          },
+        }} >
+          <MenuIcon/>
+        </IconButton>
+
+        <Box sx={{display:{
+          xs:'none',
+          sm:'block'
+        }}} >
           <NavLink to='/' >Inicio</NavLink>
           <NavLink to='/about' >Sobre mí</NavLink>
           <NavLink to='/skills' >Habilidades</NavLink>
