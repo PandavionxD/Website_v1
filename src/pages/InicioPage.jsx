@@ -20,10 +20,12 @@ export const InicioPage = () => {
   return (
     <Grid
       container
-      spacing={3}
+      spacing={4}
       justifyContent="center"
       alignItems="center"
-      minHeight="90vh"
+      maxHeight="100%"
+      overflow='hidden'
+      minHeight='89vh'
     >
       <Grid  className="animate__animated animate__fadeInLeft"  item xs={12} sm={7}>
         {/* <Image src="../assets/Desarrollo.svg" alt="Desarrollo-web" /> */}
@@ -64,7 +66,7 @@ export const InicioPage = () => {
           autodidacta, me encanta aprender por mí mismo y claro esta me encanta
           la informática.
         </Typography>
-        <Grid container xs={12} md={4}>
+        <Grid item  xs={12} md={4}>
           <Button
             sx={{
               width: "100%",
