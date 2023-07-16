@@ -1,6 +1,103 @@
+import {
+  Box,
+  Button,
+  Card,
+  CardActionArea,
+  CardContent,
+  Divider,
+  Grid,
+  Typography,
+} from "@mui/material";
+import { Link } from "react-router-dom";
+import { styled } from "styled-components";
 
 export const AboutPage = () => {
+  const Span = styled("span")({
+    color: "#3f50b5",
+    fontWeight: 700,
+  });
+
+  const Image = styled("img")({
+    width:'70%',
+    objectFit:'contain',
+    objectPosition:'center',
+    filter: 'drop-shadow(30px 20px 10px rgba(0, 0, 0, .7))',
+    borderRadius:12
+  })
+
   return (
-    <div>AboutPage</div>
-  )
-}
+    <Grid
+      container
+      spacing={4}
+      minHeight="90vh"
+      justifyContent="center"
+      alignItems="center"
+    >
+      <Grid item xs={12} sm={7}className="animate__animated animate__fadeInLeft">
+        <Card elevation={12} sx={{ padding: 2 }}>
+          <CardActionArea>
+            <CardContent>
+              <Typography
+                mb={1}
+                textAlign="center"
+                component="h2"
+                variant="h5"
+                color="primary"
+                fontWeight="700"
+              >
+                Acerca de mí
+              </Typography>
+              <Divider />
+              <Typography variant="body1" mt={1}>
+                Hola me llamo Alex Daniel Artica Rivera, vivo en Huancayo, Junín
+                - Peru; egresado de la escuela de Tecnologías de la información
+                en SENATI, me encanta la Tecnología,{" "}
+                <Span> Programación Web, Soporte Técnico, </Span> son mis
+                pasiones, esta Website esta desarrollada en <Span> React</Span>
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <Grid container padding={2} spacing={1}>
+            <Grid item xs={12} sm={6}>
+              <Button
+                fullWidth
+                variant="contained"
+                component={Link}
+                to="/skills"
+              >
+                Siguiente
+              </Button>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Button
+                component={Link}
+                to="/"
+                fullWidth
+                variant="contained"
+                color="error"
+                xs={12}
+                sm={6}
+              >
+                Atrás
+              </Button>
+            </Grid>
+          </Grid>
+        </Card>
+      </Grid>
+      <Grid item sx={{
+        width:{
+          sm:'60%',
+          md:'80%'
+        }
+      }} sm={5} className="animate__animated animate__fadeInRight" >
+        <Box component='picture' sx={{
+          borderRadius:12,
+          display:'flex',
+          justifyContent:'center'
+        }} >
+        <Image  src="/assets/315356095_610255430606295_1271877310177832689_n-removebg-preview.png" alt="yo" />
+        </Box>
+      </Grid>
+    </Grid>
+  );
+};
