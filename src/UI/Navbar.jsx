@@ -87,7 +87,6 @@ export const Navbar = () => {
             height: '60vh',
             flexDirection: "column",
             justifyContent: "center",
-            color: "white",
             fontSize: 20,
             fontWeight:700,
             color:'primary.main'

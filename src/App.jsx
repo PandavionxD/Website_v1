@@ -20,7 +20,7 @@ export const App = () => {
   return (
     <>
       <Navbar />
-      <Container>
+      <Container sx={{mt:3,minHeight:'85vh'}} >
         <Routes>
           <Route path="/" element={<InicioPage />} />
           <Route path="/about" element={<AboutPage />} />
