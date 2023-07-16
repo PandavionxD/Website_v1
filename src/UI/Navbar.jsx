@@ -90,7 +90,7 @@ export const Navbar = () => {
             justifyContent: "center",
             fontSize: 20,
             fontWeight:700,
-            color:'primary.main'
+            color:'primary.main',
           }}
         >
           <ListItemButton  component ={Link} to='/' onClick={()=>setopenNav(false)} >

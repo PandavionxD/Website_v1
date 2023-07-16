@@ -29,9 +29,11 @@ export const AboutPage = () => {
     <Grid
       container
       spacing={4}
-      minHeight="90vh"
+      minHeight="89vh"
       justifyContent="center"
       alignItems="center"
+      maxHeight="100%"
+      overflow='hidden'
     >
       <Grid item xs={12} sm={7}className="animate__animated animate__fadeInLeft">
         <Card elevation={12} sx={{ padding: 2 }}>
@@ -50,10 +52,10 @@ export const AboutPage = () => {
               <Divider />
               <Typography variant="body1" mt={1}>
                 Hola me llamo Alex Daniel Artica Rivera, vivo en Huancayo, Junín
-                - Peru; egresado de la escuela de Tecnologías de la información
+                - Perú; egresado de la escuela de Tecnologías de la información
                 en SENATI, me encanta la Tecnología,{" "}
                 <Span> Programación Web, Soporte Técnico, </Span> son mis
-                pasiones, esta Website esta desarrollada en <Span> React</Span>
+                pasiones, esta Website esta desarrollada en <Span> React.</Span>
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -93,9 +95,10 @@ export const AboutPage = () => {
         <Box component='picture' sx={{
           borderRadius:12,
           display:'flex',
-          justifyContent:'center'
+          justifyContent:'center',
+          paddingBottom:2
         }} >
-        <Image  src="/assets/315356095_610255430606295_1271877310177832689_n-removebg-preview.png" alt="yo" />
+        <Image  src="/assets/315356095_610255430606295_1271877310177832689_n-removebg-preview.webp" alt="yo" />
         </Box>
       </Grid>
     </Grid>
