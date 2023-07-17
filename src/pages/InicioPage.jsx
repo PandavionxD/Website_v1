@@ -1,6 +1,6 @@
-import {  Button, Grid, Typography } from "@mui/material";
+import { Button, CardActionArea, Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { styled } from '@mui/system';
+import { styled } from "@mui/system";
 
 export const InicioPage = () => {
   const navigate = useNavigate();
@@ -41,40 +41,43 @@ export const InicioPage = () => {
         sm={5}
         className="animate__animated animate__fadeInRight"
       >
-        <Typography
-          variant="h3"
-          component="h1"
-          mb={2}
-          sx={{
-            fontSize: {
-              xs: "2rem",
-              sm: "2.4rem",
-              md: "3rem",
-            },
-            textAlign: {
-              xs: "center",
-              sm: "left",
-            },
-          }}
-        >
-          Bienvenido a mi Pagina Web!
-        </Typography>
-        <Typography
-          variant="body2"
-          mb={2}
-          sx={{
-            textAlign: "justify",
-            fontSize: {
-              sx: 12,
-              sm: 14,
-            },
-          }}
-        >
-          Aquí dare un breve descripción acerca de mí, sobre mis hobbies y sobre
-          cosas que me gustan y me apasionan, Me considero una persona
-          autodidacta, me encanta aprender por mí mismo y claro esta me encanta
-          la informática.
-        </Typography>
+        <CardActionArea>
+          <Typography
+            variant="h3"
+            component="h1"
+            mb={2}
+            sx={{
+              fontSize: {
+                xs: "2rem",
+                sm: "2.4rem",
+                md: "3rem",
+              },
+              textAlign: {
+                xs: "center",
+                sm: "left",
+              },
+            }}
+          >
+            Bienvenido a mi Pagina Web!
+          </Typography>
+          <Typography
+            variant="body2"
+            mb={2}
+            sx={{
+              textAlign: "justify",
+              fontSize: {
+                sx: 12,
+                sm: 14,
+              },
+            }}
+          >
+            Aquí dare un breve descripción acerca de mí, sobre mis hobbies y
+            sobre cosas que me gustan y me apasionan, Me considero una persona
+            autodidacta, me encanta aprender por mí mismo y claro esta me
+            encanta la informática.
+          </Typography>
+        </CardActionArea>
+
         <Grid item xs={12} md={4}>
           <Button
             sx={{

@@ -35,6 +35,7 @@ export const AboutPage = () => {
       alignItems="center"
       maxHeight="100%"
       overflow="hidden"
+      paddingBottom={1}
     >
       <Grid
         item

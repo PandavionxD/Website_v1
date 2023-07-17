@@ -22,7 +22,7 @@ export const HabilidadesPage = () => {
       >
         <Paper sx={{ padding: 2 }} elevation={12} >
           <Grid item sm={12}>
-            <Box>
+            <CardActionArea>
               <Typography variant="h4" color="primary" sx={{
                 textAlign:{
                   xs:'center',
@@ -39,14 +39,14 @@ export const HabilidadesPage = () => {
                 web. Así mismo quiero seguir profundizando en React y también en
                 procesos de automatización con Python.
               </Typography>
-            </Box>
+            </CardActionArea>
           </Grid>
           <Grid container spacing={1} mt={1}>
             <Grid sm={4} xs={12} md={2} item mt={1}>
               <Button component={Link} to='/linux' fullWidth variant="contained" color="primary" >siguiente</Button>
             </Grid>
             <Grid sm={4} xs={12} md={2} item mt={1}>
-              <Button component={Link} to='/about' fullWidth variant="contained" color="error" >atras</Button>
+              <Button component={Link} to='/about' fullWidth variant="contained" color="error" >atrás</Button>
             </Grid>
           </Grid>
         </Paper>
@@ -54,6 +54,7 @@ export const HabilidadesPage = () => {
 
       <Grid
         container
+        paddingBottom={1}
         spacing={2}
         mt={2}
         alignItems="center"
