@@ -9,7 +9,8 @@ import {
   Typography,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import { styled } from "styled-components";
+import { styled } from '@mui/system';
+
 
 export const AboutPage = () => {
   const Span = styled("span")({
@@ -18,12 +19,12 @@ export const AboutPage = () => {
   });
 
   const Image = styled("img")({
-    width:'70%',
-    objectFit:'contain',
-    objectPosition:'center',
-    filter: 'drop-shadow(30px 20px 10px rgba(0, 0, 0, .7))',
-    borderRadius:12
-  })
+    width: "70%",
+    objectFit: "contain",
+    objectPosition: "center",
+    filter: "drop-shadow(30px 20px 10px rgba(0, 0, 0, .7))",
+    borderRadius: 12,
+  });
 
   return (
     <Grid
@@ -33,9 +34,14 @@ export const AboutPage = () => {
       justifyContent="center"
       alignItems="center"
       maxHeight="100%"
-      overflow='hidden'
+      overflow="hidden"
     >
-      <Grid item xs={12} sm={7}className="animate__animated animate__fadeInLeft">
+      <Grid
+        item
+        xs={12}
+        sm={7}
+        className="animate__animated animate__fadeInLeft"
+      >
         <Card elevation={12} sx={{ padding: 2 }}>
           <CardActionArea>
             <CardContent>
@@ -55,7 +61,8 @@ export const AboutPage = () => {
                 - Perú; egresado de la escuela de Tecnologías de la información
                 en SENATI, me encanta la Tecnología,{" "}
                 <Span> Programación Web, Soporte Técnico, </Span> son mis
-                pasiones, esta Website esta desarrollada en <Span> React.</Span>
+                pasiones, esta Website esta desarrollada en{" "}
+                <Span> React y Material User Interface - MUI .</Span>
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -86,19 +93,30 @@ export const AboutPage = () => {
           </Grid>
         </Card>
       </Grid>
-      <Grid item sx={{
-        width:{
-          sm:'60%',
-          md:'80%'
-        }
-      }} sm={5} className="animate__animated animate__fadeInRight" >
-        <Box component='picture' sx={{
-          borderRadius:12,
-          display:'flex',
-          justifyContent:'center',
-          paddingBottom:2
-        }} >
-        <Image  src="/assets/315356095_610255430606295_1271877310177832689_n-removebg-preview.webp" alt="yo" />
+      <Grid
+        item
+        sx={{
+          width: {
+            sm: "60%",
+            md: "80%",
+          },
+        }}
+        sm={5}
+        className="animate__animated animate__fadeInRight"
+      >
+        <Box
+          component="picture"
+          sx={{
+            borderRadius: 12,
+            display: "flex",
+            justifyContent: "center",
+            paddingBottom: 2,
+          }}
+        >
+          <Image
+            src="/assets/315356095_610255430606295_1271877310177832689_n-removebg-preview.webp"
+            alt="yo"
+          />
         </Box>
       </Grid>
     </Grid>

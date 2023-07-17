@@ -1,6 +1,6 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import {  Button, Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { styled } from "styled-components";
+import { styled } from '@mui/system';
 
 export const InicioPage = () => {
   const navigate = useNavigate();
@@ -24,14 +24,23 @@ export const InicioPage = () => {
       justifyContent="center"
       alignItems="center"
       maxHeight="100%"
-      overflow='hidden'
-      minHeight='89vh'
+      overflow="hidden"
+      minHeight="89vh"
     >
-      <Grid  className="animate__animated animate__fadeInLeft"  item xs={12} sm={7}>
-        {/* <Image src="../assets/Desarrollo.svg" alt="Desarrollo-web" /> */}
+      <Grid
+        className="animate__animated animate__fadeInLeft"
+        item
+        xs={12}
+        sm={7}
+      >
         <Image src="/assets/Desarrollo.svg" alt="Desarrollo-web" />
       </Grid>
-      <Grid item xs={12} sm={5} className="animate__animated animate__fadeInRight">
+      <Grid
+        item
+        xs={12}
+        sm={5}
+        className="animate__animated animate__fadeInRight"
+      >
         <Typography
           variant="h3"
           component="h1"
@@ -66,7 +75,7 @@ export const InicioPage = () => {
           autodidacta, me encanta aprender por mí mismo y claro esta me encanta
           la informática.
         </Typography>
-        <Grid item  xs={12} md={4}>
+        <Grid item xs={12} md={4}>
           <Button
             sx={{
               width: "100%",
