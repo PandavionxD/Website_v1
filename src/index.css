@@ -1,3 +1,15 @@
 .animate__animated{
     animation-duration: 3s;
 }
+@media (max-width:600px) {
+    img.img1{
+        display: block;
+        width: 30%;
+    }
+    .picture{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8px;
+    }
+    
+}
