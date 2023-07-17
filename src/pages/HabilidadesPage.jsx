@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   CardActionArea,
@@ -7,78 +8,116 @@ import {
   CardMedia,
   Divider,
   Grid,
+  Paper,
   Typography,
 } from "@mui/material";
 import { Cards } from "../helpers/helpers";
 
 export const HabilidadesPage = () => {
   return (
-    <Grid
-      container
-      spacing={2}
-      mt={2}
-      alignItems="center"
-      justifyContent="center"
-      className="animate__animated animate__fadeInUpBig"
-    >
-      {Cards.map(({ img, description, link, title }, id) => (
-        <Grid item xs={12} sm={6} md={4} lg={3} maxWidth={320} key={id}>
-          <Card
-            elevation={12}
-            sx={{
-              padding: 1,
-              height: 460,
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-            }}
-          >
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                sx={{
-                  objectFit: "contain",
-                  objectPosition: "center",
-                  height: 180,
-                  width: "100%",
-                }}
-                image={img}
-              />
-              <CardContent>
-                <Typography
-                  variant="h5"
-                  component="h1"
-                  mb={1}
-                  color="primary"
-                  textAlign="center"
-                >
-                  {title}
-                </Typography>
-                <Divider />
-                <Typography variant="body2" my={1}>
-                  {description}
-                </Typography>
-                <Divider />
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Grid container mt={1}>
-                <Grid item xs={12}>
-                  <Button
-                    sx={{ width: "100%" }}
-                    variant="contained"
-                    component="a"
-                    href={link}
-                    target="_blank"
+    <>
+      <Grid container direction="column" 
+      className="animate__animated animate__fadeInLeft"
+      >
+        <Paper sx={{ padding: 2 }} elevation={12} >
+          <Grid item sm={12}>
+            <Box>
+              <Typography variant="h4" color="primary" sx={{
+                textAlign:{
+                  xs:'center',
+                  sm:'left'
+                }
+              }}  >
+                Habilidades:
+              </Typography>
+              <Typography variant="body2" mt={1}>
+                En lo que respecta estoy muy agradecido en las empresas que
+                estuve trabajando y donde pude aprender muchas cosas, EPS Sedam
+                Huancayo, Grupo Romero, etc. Actualmente, tengo experiencia en
+                Soporte Técnico de equipos informáticos y también en desarrollo
+                web. Así mismo quiero seguir profundizando en React y también en
+                procesos de automatización con Python.
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid container spacing={1} mt={1}>
+            <Grid sm={4} xs={12} md={2} item mt={1}>
+              <Button fullWidth variant="contained" color="primary" >atras</Button>
+            </Grid>
+            <Grid sm={4} xs={12} md={2} item mt={1}>
+              <Button fullWidth variant="contained" color="error" >atras</Button>
+            </Grid>
+          </Grid>
+        </Paper>
+      </Grid>
+
+      <Grid
+        container
+        spacing={2}
+        mt={2}
+        alignItems="center"
+        justifyContent="center"
+        className="animate__animated animate__fadeInUpBig"
+      >
+        {Cards.map(({ img, description, link, title }, id) => (
+          <Grid item xs={12} sm={6} md={4} lg={3} maxWidth={320} key={id}>
+            <Card
+              elevation={12}
+              sx={{
+                padding: 1,
+                height: 460,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
+            >
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  sx={{
+                    objectFit: "contain",
+                    objectPosition: "center",
+                    height: 180,
+                    width: "100%",
+                  }}
+                  image={img}
+                />
+                <CardContent>
+                  <Typography
+                    variant="h5"
+                    component="h1"
+                    mb={1}
+                    color="primary"
+                    textAlign="center"
                   >
-                    Ver más
-                  </Button>
+                    {title}
+                  </Typography>
+                  <Divider />
+                  <Typography variant="body2" my={1}>
+                    {description}
+                  </Typography>
+                  <Divider />
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Grid container mt={1}>
+                  <Grid item xs={12}>
+                    <Button
+                      sx={{ width: "100%" }}
+                      variant="contained"
+                      component="a"
+                      href={link}
+                      target="_blank"
+                    >
+                      Ver más
+                    </Button>
+                  </Grid>
                 </Grid>
-              </Grid>
-            </CardActions>
-          </Card>
-        </Grid>
-      ))}
-    </Grid>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </>
   );
 };
