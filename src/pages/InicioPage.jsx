@@ -1,4 +1,4 @@
-import { Button, CardActionArea, Grid, Typography } from "@mui/material";
+import { Button, CardActionArea, Divider, Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { styled } from "@mui/system";
 
@@ -61,9 +61,11 @@ export const InicioPage = () => {
           >
             Bienvenido a mi Pagina Web!
           </Typography>
+          <Divider/>
           <Typography
             variant="body2"
             mb={2}
+            mt={1}
             sx={{
               textAlign: "justify",
               fontSize: {

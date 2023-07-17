@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import { Link } from "react-router-dom";
 
@@ -16,7 +16,6 @@ export const LinuxPage = () => {
       justifyContent="center"
       alignItems="center"
       minHeight="90vh"
-      // height="100%"
       pb={2}
       overflow='hidden'
     >
@@ -28,7 +27,7 @@ export const LinuxPage = () => {
       </Grid>
       <Grid  className="animate__animated animate__fadeInRight" item xs={12} sm={12} md={6} >
         <Box>
-          <Typography color="primary" variant="h4" component="h2" sx={{
+          <Typography color="primary" variant="h4" component="h2" mb={1} sx={{
             textAlign:{
               xs:'center',
               sx:'left'
@@ -36,6 +35,7 @@ export const LinuxPage = () => {
           }}>
             ¿Que es el Open Source?
           </Typography>
+          <Divider/>
           <Typography variant="body2" textAlign={"justify"} mt={1}>
             El software open source es un código diseñado de manera que sea
             accesible al público: donde todos pueden ver, modificar y distribuir

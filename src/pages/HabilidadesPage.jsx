@@ -31,6 +31,7 @@ export const HabilidadesPage = () => {
               }}  >
                 Habilidades:
               </Typography>
+              <Divider/>
               <Typography variant="body2" mt={1}>
                 En lo que respecta estoy muy agradecido en las empresas que
                 estuve trabajando y donde pude aprender muchas cosas, EPS Sedam

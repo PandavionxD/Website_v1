@@ -50,9 +50,9 @@ export const AboutPage = () => {
                 mb={1}
                 textAlign="center"
                 component="h2"
-                variant="h5"
+                variant="h4"
                 color="primary"
-                fontWeight="700"
+                fontWeight="500"
               >
                 Acerca de mí
               </Typography>
