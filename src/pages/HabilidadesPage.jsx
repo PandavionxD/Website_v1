@@ -54,7 +54,7 @@ export const HabilidadesPage = () => {
 
       <Grid
         container
-        paddingBottom={1}
+        paddingBottom={2}
         spacing={2}
         mt={2}
         alignItems="center"
@@ -67,7 +67,7 @@ export const HabilidadesPage = () => {
               elevation={12}
               sx={{
                 padding: 1,
-                height: 440,
+                height: 460,
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
