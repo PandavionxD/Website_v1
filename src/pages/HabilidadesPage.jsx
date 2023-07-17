@@ -19,6 +19,7 @@ export const HabilidadesPage = () => {
       mt={2}
       alignItems="center"
       justifyContent="center"
+      className="animate__animated animate__fadeInUpBig"
     >
       {Cards.map(({ img, description, link, title }, id) => (
         <Grid item xs={12} sm={6} md={4} lg={3} maxWidth={320} key={id}>
