@@ -1,10 +1,18 @@
-import { Button, CardActionArea, Divider, Grid, Typography } from "@mui/material";
+import {
+  Button,
+  CardActionArea,
+  Divider,
+  Grid,
+  Typography,
+} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { styled } from "@mui/system";
-import { Padding } from "@mui/icons-material";
+import { useContext } from "react";
+import { ModoTHeme } from "../context/ModoTheme";
 
 export const InicioPage = () => {
   const navigate = useNavigate();
+  const { modoApp } = useContext(ModoTHeme);
 
   const Image = styled("img")({
     width: "90%",
@@ -17,6 +25,12 @@ export const InicioPage = () => {
       replace: false,
     });
   };
+
+  let color = "primary";
+
+  if (modoApp === "dark") {
+    color = "white";
+  }
 
   return (
     <Grid
@@ -47,7 +61,7 @@ export const InicioPage = () => {
             variant="h3"
             component="h1"
             mb={2}
-            color='primary'
+            color={color}
             sx={{
               fontSize: {
                 xs: "2rem",
@@ -62,7 +76,7 @@ export const InicioPage = () => {
           >
             Bienvenido a mi Pagina Web!
           </Typography>
-          <Divider/>
+          <Divider />
           <Typography
             variant="body2"
             mb={2}

@@ -28,7 +28,6 @@ export const Navbar = () => {
   const [openNav, setopenNav] = useState(false);
 
   const { modoApp } = useContext(ModoTHeme);
-  console.log(modoApp);
 
 
   const OpenNav = () => {
@@ -39,6 +38,11 @@ let color ="#3f50b5"
 
 if(modoApp==='dark'){
   color = 'white'
+}
+
+let color2 = 'primary'
+if(modoApp==='dark'){
+  color2 = 'white'
 }
 
   return (
@@ -58,7 +62,7 @@ if(modoApp==='dark'){
           </Typography>
 
           <IconButton
-            color="primary"
+            color={color2}
             sx={{
               display: {
                 sm: "none",
@@ -110,7 +114,7 @@ if(modoApp==='dark'){
             justifyContent: "center",
             fontSize: 20,
             fontWeight: 700,
-            color: "primary.main",
+            color: {color},
           }}
         >
           <ListItemButton
@@ -119,9 +123,9 @@ if(modoApp==='dark'){
             onClick={() => setopenNav(false)}
           >
             <ListItemIcon>
-              <HomeIcon color="primary" />
+              <HomeIcon color={color2} />
             </ListItemIcon>
-            <ListItemText primary="Inicio" />
+            <ListItemText   primary="Inicio" />
           </ListItemButton>
           <Divider />
           <ListItemButton
@@ -130,7 +134,7 @@ if(modoApp==='dark'){
             onClick={() => setopenNav(false)}
           >
             <ListItemIcon>
-              <AccountCircleIcon color="primary" />
+              <AccountCircleIcon color={color2}  />
             </ListItemIcon>
             <ListItemText primary="Sobre mí" />
           </ListItemButton>
@@ -141,7 +145,7 @@ if(modoApp==='dark'){
             onClick={() => setopenNav(false)}
           >
             <ListItemIcon>
-              <LanguageIcon color="primary" />
+              <LanguageIcon color={color2} />
             </ListItemIcon>
             <ListItemText primary="Habilidades" />
           </ListItemButton>
@@ -152,7 +156,7 @@ if(modoApp==='dark'){
             onClick={() => setopenNav(false)}
           >
             <ListItemIcon>
-              <TerminalIcon color="primary" />
+              <TerminalIcon color={color2} />
             </ListItemIcon>
             <ListItemText primary="Linux" />
           </ListItemButton>
@@ -163,7 +167,7 @@ if(modoApp==='dark'){
             onClick={() => setopenNav(false)}
           >
             <ListItemIcon>
-              <CallIcon color="primary" />
+              <CallIcon color={color2} />
             </ListItemIcon>
             <ListItemText primary="Contacto" />
           </ListItemButton>
