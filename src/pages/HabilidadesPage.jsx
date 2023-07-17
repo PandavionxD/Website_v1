@@ -12,6 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Cards } from "../helpers/helpers";
+import { Link } from "react-router-dom";
 
 export const HabilidadesPage = () => {
   return (
@@ -33,7 +34,7 @@ export const HabilidadesPage = () => {
               <Typography variant="body2" mt={1}>
                 En lo que respecta estoy muy agradecido en las empresas que
                 estuve trabajando y donde pude aprender muchas cosas, EPS Sedam
-                Huancayo, Grupo Romero, etc. Actualmente, tengo experiencia en
+                Huancayo, Grupo Romero Caja, etc. Actualmente, tengo experiencia en
                 Soporte Técnico de equipos informáticos y también en desarrollo
                 web. Así mismo quiero seguir profundizando en React y también en
                 procesos de automatización con Python.
@@ -42,10 +43,10 @@ export const HabilidadesPage = () => {
           </Grid>
           <Grid container spacing={1} mt={1}>
             <Grid sm={4} xs={12} md={2} item mt={1}>
-              <Button fullWidth variant="contained" color="primary" >atras</Button>
+              <Button component={Link} to='/linux' fullWidth variant="contained" color="primary" >siguiente</Button>
             </Grid>
             <Grid sm={4} xs={12} md={2} item mt={1}>
-              <Button fullWidth variant="contained" color="error" >atras</Button>
+              <Button component={Link} to='/about' fullWidth variant="contained" color="error" >atras</Button>
             </Grid>
           </Grid>
         </Paper>
@@ -60,12 +61,12 @@ export const HabilidadesPage = () => {
         className="animate__animated animate__fadeInUpBig"
       >
         {Cards.map(({ img, description, link, title }, id) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} maxWidth={320} key={id}>
+          <Grid item xs={12} sm={6} md={4} lg={3} maxWidth={350} key={id}>
             <Card
               elevation={12}
               sx={{
                 padding: 1,
-                height: 460,
+                height: 440,
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
