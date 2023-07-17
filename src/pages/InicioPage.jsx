@@ -96,7 +96,7 @@ export const InicioPage = () => {
           </Typography>
         </CardActionArea>
 
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} mt={1}>
           <Button
             sx={{
               width: "100%",

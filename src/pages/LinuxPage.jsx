@@ -1,6 +1,8 @@
 import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/system";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ModoTHeme } from "../context/ModoTheme";
 
 export const LinuxPage = () => {
   const Image = styled("img")({
@@ -8,6 +10,15 @@ export const LinuxPage = () => {
     objectFit: "contain",
     objectPosition: "center",
   });
+
+  const { modoApp } = useContext(ModoTHeme);
+  
+  let color = "primary";
+
+  if (modoApp === "dark") {
+    color = "white";
+  }
+
 
   return (
     <Grid
@@ -27,7 +38,7 @@ export const LinuxPage = () => {
       </Grid>
       <Grid  className="animate__animated animate__fadeInRight" item xs={12} sm={12} md={6} >
         <Box>
-          <Typography color="primary" variant="h4" component="h2" mb={1} sx={{
+          <Typography color={color} variant="h4" component="h2" mb={1} sx={{
             textAlign:{
               xs:'center',
               sx:'left'

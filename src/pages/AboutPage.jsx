@@ -10,11 +10,27 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import { styled } from '@mui/system';
+import { useContext } from "react";
+import { ModoTHeme } from "../context/ModoTheme";
 
 
 export const AboutPage = () => {
+  
+  const { modoApp } = useContext(ModoTHeme);
+  
+  let color = "primary";
+
+  if (modoApp === "dark") {
+    color = "white";
+  }
+  
+  let color2 = "#3f50b5"
+  if (modoApp === "dark") {
+    color2 = "white";
+  }
+
   const Span = styled("span")({
-    color: "#3f50b5",
+    color: {color2},
     fontWeight: 700,
   });
 
@@ -51,7 +67,7 @@ export const AboutPage = () => {
                 textAlign="center"
                 component="h2"
                 variant="h4"
-                color="primary"
+                color={color}
                 fontWeight="500"
               >
                 Acerca de mí

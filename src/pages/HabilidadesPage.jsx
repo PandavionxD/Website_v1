@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Card,
   CardActionArea,
@@ -13,17 +12,29 @@ import {
 } from "@mui/material";
 import { Cards } from "../helpers/helpers";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { ModoTHeme } from "../context/ModoTheme";
 
 export const HabilidadesPage = () => {
+
+  const { modoApp } = useContext(ModoTHeme);
+  
+  let color = "primary";
+
+  if (modoApp === "dark") {
+    color = "white";
+  }
+
+
   return (
     <>
-      <Grid  sm={12} md={12} container direction="column" 
+      <Grid   container direction="column" 
       className="animate__animated animate__fadeInLeft"
       >
         <Paper sx={{ padding: 2 }} elevation={12} >
-          <Grid item sm={12}>
+          <Grid item sm={12} >
             <CardActionArea>
-              <Typography variant="h4" color="primary" sx={{
+              <Typography variant="h4" color={color} sx={{
                 textAlign:{
                   xs:'center',
                   sm:'left'
@@ -90,7 +101,7 @@ export const HabilidadesPage = () => {
                     variant="h5"
                     component="h1"
                     mb={1}
-                    color="primary"
+                    color={color}
                     textAlign="center"
                   >
                     {title}
