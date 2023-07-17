@@ -46,6 +46,7 @@ export const InicioPage = () => {
             variant="h3"
             component="h1"
             mb={2}
+            color='primary'
             sx={{
               fontSize: {
                 xs: "2rem",
