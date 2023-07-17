@@ -1,6 +1,7 @@
 import { Button, CardActionArea, Divider, Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { styled } from "@mui/system";
+import { Padding } from "@mui/icons-material";
 
 export const InicioPage = () => {
   const navigate = useNavigate();

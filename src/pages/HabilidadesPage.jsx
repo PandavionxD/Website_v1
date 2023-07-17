@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 export const HabilidadesPage = () => {
   return (
     <>
-      <Grid container direction="column" 
+      <Grid  sm={12} md={12} container direction="column" 
       className="animate__animated animate__fadeInLeft"
       >
         <Paper sx={{ padding: 2 }} elevation={12} >
