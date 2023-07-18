@@ -24,14 +24,15 @@ export const AboutPage = () => {
     color = "white";
   }
   
-  let color2 = "#3f50b5"
+  let color1 = "#3f50b5"
   if (modoApp === "dark") {
-    color2 = "white";
+    color1 = "white";
   }
 
   const Span = styled("span")({
-    color: {color2},
     fontWeight: 700,
+    display:'inline',
+    color:`${color1}`
   });
 
   const Image = styled("img")({
