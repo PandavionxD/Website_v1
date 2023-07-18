@@ -1,13 +1,28 @@
 import { useMemo, useState } from "react";
 import { DarkModeContext } from "./DarkContext";
 import { ThemeProvider, createTheme } from "@mui/material";
+import { useSnackbar } from "notistack";
 
 export const DarkProvider = ({ children }) => {
   const [mode, setMode] = useState("light");
+
+  const { enqueueSnackbar } = useSnackbar();
+
+  const openSnack = () => {
+    enqueueSnackbar(`Cambiando el tema `, {
+      variant: "info",
+      anchorOrigin: {
+        vertical: "top",
+        horizontal: "right",
+      },
+    });
+  };
+
   const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
         setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+        openSnack();
       },
     }),
     []

@@ -63,7 +63,7 @@ export const AboutPage = () => {
           <CardActionArea>
             <CardContent>
               <Typography
-                mb={1}
+                mb={2}
                 textAlign="center"
                 component="h2"
                 variant="h4"
